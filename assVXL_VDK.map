@@ -1,31 +1,34 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Mon Mar 07 15:35:28 2016
+Linker Map File - Created Mon Mar 07 17:18:55 2016
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-             .code_main.o       code   0x000008    program   0x000258
-               _cinit_scn       code   0x000260    program   0x00009e
-         .code_spi1open.o       code   0x0002fe    program   0x000064
-         .code_spi1writ.o       code   0x000362    program   0x00003c
-                    .code       code   0x00039e    program   0x000020
-             _startup_scn       code   0x0003be    program   0x00001c
-              D10TCYXCODE       code   0x0003da    program   0x000016
-             .stringtable    romdata   0x0003f0    program   0x00000f
-          .romdata_main.o    romdata   0x0003ff    program   0x000000
-          .idata_main.o_i    romdata   0x0003ff    program   0x000000
-      .idata_spi1open.o_i    romdata   0x0003ff    program   0x000000
-      .romdata_spi1open.o    romdata   0x0003ff    program   0x000000
-      .idata_spi1writ.o_i    romdata   0x0003ff    program   0x000000
-      .romdata_spi1writ.o    romdata   0x0003ff    program   0x000000
-         .romdata_c018i.o    romdata   0x0003ff    program   0x000000
-        .idata___init.o_i    romdata   0x0003ff    program   0x000000
-        .romdata___init.o    romdata   0x0003ff    program   0x000000
-         .idata_c018i.o_i    romdata   0x0003ff    program   0x000000
-            .code_c018i.o       code   0x000400    program   0x000000
-           .code___init.o       code   0x000400    program   0x000002
+              .code_lcd.o       code   0x000008    program   0x0001e8
+             .code_main.o       code   0x0001f0    program   0x0000a8
+               _cinit_scn       code   0x000298    program   0x00009e
+         .code_spi1open.o       code   0x000336    program   0x000064
+         .code_spi1writ.o       code   0x00039a    program   0x00003c
+                    .code       code   0x0003d6    program   0x000020
+             .stringtable    romdata   0x0003f6    program   0x00001d
+        .romdata___init.o    romdata   0x000413    program   0x000000
+        .idata___init.o_i    romdata   0x000413    program   0x000000
+      .romdata_spi1writ.o    romdata   0x000413    program   0x000000
+      .idata_spi1writ.o_i    romdata   0x000413    program   0x000000
+      .romdata_spi1open.o    romdata   0x000413    program   0x000000
+      .idata_spi1open.o_i    romdata   0x000413    program   0x000000
+           .romdata_lcd.o    romdata   0x000413    program   0x000000
+           .idata_lcd.o_i    romdata   0x000413    program   0x000000
+          .romdata_main.o    romdata   0x000413    program   0x000000
+          .idata_main.o_i    romdata   0x000413    program   0x000000
+         .romdata_c018i.o    romdata   0x000413    program   0x000000
+         .idata_c018i.o_i    romdata   0x000413    program   0x000000
+             _startup_scn       code   0x000414    program   0x00001c
+            .code_c018i.o       code   0x000414    program   0x000000
+              D10TCYXCODE       code   0x000430    program   0x000016
+           .code___init.o       code   0x000446    program   0x000002
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000002
@@ -35,6 +38,8 @@ Linker Map File - Created Mon Mar 07 15:35:28 2016
            .idata_c018i.o      idata   0x000f0a       data   0x000000
             .udata_main.o      udata   0x000f0a       data   0x000000
             .idata_main.o      idata   0x000f0a       data   0x000000
+             .udata_lcd.o      udata   0x000f0a       data   0x000000
+             .idata_lcd.o      idata   0x000f0a       data   0x000000
         .udata_spi1open.o      udata   0x000f0a       data   0x000000
         .idata_spi1open.o      idata   0x000f0a       data   0x000000
         .udata_spi1writ.o      udata   0x000f0a       data   0x000000
@@ -48,53 +53,55 @@ Linker Map File - Created Mon Mar 07 15:35:28 2016
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0003fe      
-                            0x000400    0x000401      
+                            0x000000    0x000412      
+                            0x000414    0x000447      
                             0x300001    0x300001      
                             0x300003    0x300003      
-            1027 out of 132120 program addresses used, program memory utilization is 0%
+            1097 out of 132120 program addresses used, program memory utilization is 0%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                    D10_1   0x0003ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x0003e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-              Delay10TCYx   0x0003da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                 OpenSPI1   0x0002fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1open.c
-                WriteSPI1   0x000362    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1writ.c
-        _D10TCYXCODE_000A   0x0003e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x0003e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x0003e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x000440    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x000438    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              Delay10TCYx   0x000430    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                 OpenSPI1   0x000336    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1open.c
+                WriteSPI1   0x00039a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1writ.c
+        _D10TCYXCODE_000A   0x00043a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x00043c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x00043e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x0003d8    program     static                          
-       ___return_lbl00002   0x0002fc    program     static                          
-               __config_0   0x300001    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-               __config_1   0x300003    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                   __init   0x000400    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __string_0   0x0003f0    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-            __zero_memory   0x00039e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                _do_cinit   0x000260    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00001   0x00042e    program     static                          
+       ___return_lbl00002   0x000334    program     static                          
+               __config_0   0x300001    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+               __config_1   0x300003    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+                   __init   0x000446    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __string_0   0x000405    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+               __string_1   0x0003f6    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+            __zero_memory   0x0003d6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                _do_cinit   0x000298    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x0003be    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x0003b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                copy_loop   0x0002d2    program     static                          
-            copy_one_byte   0x0002d8    program     static                          
-                     done   0x0002fc    program     static                          
-             done_copying   0x0002e6    program     static                          
-                  lcdChar   0x0001a4    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-               lcdCommand   0x00013e    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                  lcdGoTo   0x000204    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-           lcdWriteString   0x000220    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                     loop   0x0003ce    program     static                          
-                   loop_h   0x0003ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                   loop_l   0x0003b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                     main   0x000008    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                  setGPIO   0x0000d2    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                 setIODIR   0x000108    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                     test   0x00027a    program     static                          
-               zero_block   0x0003ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                 _startup   0x000414    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x0003ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                copy_loop   0x00030a    program     static                          
+            copy_one_byte   0x000310    program     static                          
+                     done   0x000334    program     static                          
+             done_copying   0x00031e    program     static                          
+                  lcdChar   0x0000da    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+               lcdCommand   0x000074    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                  lcdGoTo   0x00013a    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+           lcdWriteString   0x000156    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                 lcd_init   0x000196    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                     loop   0x000424    program     static                          
+                   loop_h   0x0003e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                   loop_l   0x0003ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                     main   0x0001f0    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+                  setGPIO   0x000008    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                 setIODIR   0x00003e    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                     test   0x0002b2    program     static                          
+               zero_block   0x0003e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
@@ -404,40 +411,42 @@ Linker Map File - Created Mon Mar 07 15:35:28 2016
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-                     main   0x000008    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                  setGPIO   0x0000d2    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                 setIODIR   0x000108    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-               lcdCommand   0x00013e    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                  lcdChar   0x0001a4    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                  lcdGoTo   0x000204    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-           lcdWriteString   0x000220    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                _do_cinit   0x000260    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x00027a    program     static                          
-                copy_loop   0x0002d2    program     static                          
-            copy_one_byte   0x0002d8    program     static                          
-             done_copying   0x0002e6    program     static                          
-                     done   0x0002fc    program     static                          
-       ___return_lbl00002   0x0002fc    program     static                          
-                 OpenSPI1   0x0002fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1open.c
-                WriteSPI1   0x000362    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1writ.c
-            __zero_memory   0x00039e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                   loop_h   0x0003ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-               zero_block   0x0003ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                compare_l   0x0003b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                   loop_l   0x0003b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
-                 _startup   0x0003be    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x0003ce    program     static                          
-       ___return_lbl00001   0x0003d8    program     static                          
-              Delay10TCYx   0x0003da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x0003e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000A   0x0003e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x0003e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x0003e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D10_1   0x0003ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-               __string_0   0x0003f0    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-                   __init   0x000400    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __config_0   0x300001    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
-               __config_1   0x300003    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Assignment\main.c
+                  setGPIO   0x000008    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                 setIODIR   0x00003e    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+               lcdCommand   0x000074    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                  lcdChar   0x0000da    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                  lcdGoTo   0x00013a    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+           lcdWriteString   0x000156    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                 lcd_init   0x000196    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\lcd.c
+                     main   0x0001f0    program     extern D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+                _do_cinit   0x000298    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0002b2    program     static                          
+                copy_loop   0x00030a    program     static                          
+            copy_one_byte   0x000310    program     static                          
+             done_copying   0x00031e    program     static                          
+       ___return_lbl00002   0x000334    program     static                          
+                     done   0x000334    program     static                          
+                 OpenSPI1   0x000336    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1open.c
+                WriteSPI1   0x00039a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi1writ.c
+            __zero_memory   0x0003d6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+               zero_block   0x0003e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                   loop_h   0x0003e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                compare_l   0x0003ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+                   loop_l   0x0003ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f8722.asm
+               __string_1   0x0003f6    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+               __string_0   0x000405    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+                 _startup   0x000414    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x000424    program     static                          
+       ___return_lbl00001   0x00042e    program     static                          
+              Delay10TCYx   0x000430    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x000438    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x00043a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x00043c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x00043e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x000440    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                   __init   0x000446    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __config_0   0x300001    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
+               __config_1   0x300003    program     static D:\Users\King\Desktop\Study Materials\Semester 2 - Year 3\TH VXL_VDK\Git Workplace\MPU-MCU\main.c
                      SIGN   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
